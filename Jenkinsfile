@@ -9,7 +9,7 @@ pipeline {
         }
         steps {
           sh 'python -m py-compile sources/add2vals.py sources/calc.py'
-          stash(name: "Compiled-files", include: 'sources/*.py')
+          stash(name: "Compiled-files", includes: 'sources/*.py')
         }
       }
   }
