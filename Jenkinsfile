@@ -8,5 +8,12 @@ pipeline {
           stash(name: "Compiled-files", includes: 'sources/*.py')
         }
       }
+
+      stage("Test") {
+        agent any
+        steps {
+          sh "cd sources && pytest"
+        }
+      }
   }
 }
