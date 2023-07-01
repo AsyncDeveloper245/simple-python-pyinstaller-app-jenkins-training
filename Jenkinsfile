@@ -15,5 +15,12 @@ pipeline {
           sh "cd sources && pytest"
         }
       }
+
+      stage('Deploy') {
+        agent any
+        steps {
+          sh ""
+        }
+      }
   }
 }
