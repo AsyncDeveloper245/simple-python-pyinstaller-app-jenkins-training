@@ -4,7 +4,7 @@ WORKDIR /app
 COPY sources/reqs.txt .
 RUN pip install --no-cache-dir -r reqs.txt
 
-COPY sources/* .
+COPY sources/* ./
 
 EXPOSE 5000
 
