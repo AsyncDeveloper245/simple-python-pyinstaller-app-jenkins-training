@@ -20,6 +20,7 @@ pipeline {
         agent any
         steps {
           sh "docker build -t asyncdeveloper/jenkins-test ."
+          sh "docker run -d -p 5000:5000 -n jenkins-app asyncdeveloper/jenkins-test"
         }
       }
   }
