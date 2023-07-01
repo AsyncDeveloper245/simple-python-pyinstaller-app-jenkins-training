@@ -19,7 +19,7 @@ pipeline {
       stage('Deploy') {
         agent any
         steps {
-          sh ""
+          sh "docker build -t asyncdeveloper/jenkins-test ."
         }
       }
   }
