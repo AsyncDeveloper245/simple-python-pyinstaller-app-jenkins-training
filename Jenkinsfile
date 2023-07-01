@@ -5,7 +5,7 @@ pipeline {
     stage("Test Pipeline") {
     
       steps {
-      sh "Hey it is working"
+      sh "echo 'Hey it is working'"
     }
 }
 
